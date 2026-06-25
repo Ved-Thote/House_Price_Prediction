@@ -1,22 +1,6 @@
-<div align="center">
+# House Price Prediction
 
-```
-██╗  ██╗ ██████╗ ██╗   ██╗███████╗███████╗    ██████╗ ██████╗ ██╗ ██████╗███████╗
-██║  ██║██╔═══██╗██║   ██║██╔════╝██╔════╝    ██╔══██╗██╔══██╗██║██╔════╝██╔════╝
-███████║██║   ██║██║   ██║███████╗█████╗      ██████╔╝██████╔╝██║██║     █████╗  
-██╔══██║██║   ██║██║   ██║╚════██║██╔══╝      ██╔═══╝ ██╔══██╗██║██║     ██╔══╝  
-██║  ██║╚██████╔╝╚██████╔╝███████║███████╗    ██║     ██║  ██║██║╚██████╗███████╗
-╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝
-
-██████╗ ██████╗ ███████╗██████╗ ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗
-██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║
-██████╔╝██████╔╝█████╗  ██║  ██║██║██║        ██║   ██║██║   ██║██╔██╗ ██║
-██╔═══╝ ██╔══██╗██╔══╝  ██║  ██║██║██║        ██║   ██║██║   ██║██║╚██╗██║
-██║     ██║  ██║███████╗██████╔╝██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║
-╚═╝     ╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-```
-
-### 🏠 *because someone had to teach a computer what a house is worth*
+_because someone had to teach a computer what a house is worth_
 
 <br>
 
@@ -29,7 +13,7 @@
 
 <br>
 
-> *"My cousin paid ₹85 lakhs for a 2BHK. I made an ML model. We are not the same."*
+> _"My cousin paid ₹85 lakhs for a 2BHK. I made an ML model. We are not the same."_
 
 </div>
 
@@ -39,13 +23,13 @@
 
 ## okay so here's the story
 
-it started as a college assignment. the kind where the prof says *"build something with ML"* and gives you exactly zero guidance on what that means.
+it started as a college assignment. the kind where the prof says _"build something with ML"_ and gives you exactly zero guidance on what that means.
 
 most of my classmates downloaded a kaggle notebook, changed the title, and submitted it.
 
 i didn't want to do that.
 
-i wanted to build something that actually **runs**. something i could open my laptop, demo in an interview, and not feel like a fraud doing it. something where if someone asked *"how does the preprocessing work"* i could actually answer without sweating through my shirt.
+i wanted to build something that actually **runs**. something i could open my laptop, demo in an interview, and not feel like a fraud doing it. something where if someone asked _"how does the preprocessing work"_ i could actually answer without sweating through my shirt.
 
 so i spent a weekend on it. three cups of chai, one all-nighter, and a concerning amount of Stack Overflow. and this is what came out.
 
@@ -94,15 +78,15 @@ the architecture is OOP — `DataLoader`, `DataPreprocessor`, `ModelTrainer`, `V
 
 ## 📊 model performance (the numbers that matter in interviews)
 
-| what we measured | what we got | what it means in plain english |
-|---|---|---|
-| **R² Score** | **0.9599** | the model explains ~96% of price variation. yes really. |
-| **MAE** | ₹ 7,42,344 | on average, off by about 7.4 lakhs |
-| **RMSE** | ₹ 9,32,132 | punishes big misses more. still under a lakh per predicted crore |
+| what we measured | what we got | what it means in plain english                                   |
+| ---------------- | ----------- | ---------------------------------------------------------------- |
+| **R² Score**     | **0.9599**  | the model explains ~96% of price variation. yes really.          |
+| **MAE**          | ₹ 7,42,344  | on average, off by about 7.4 lakhs                               |
+| **RMSE**         | ₹ 9,32,132  | punishes big misses more. still under a lakh per predicted crore |
 
 > quick test i ran: Urban, 1800 sq ft, 3BHK, Semi-Furnished, 5 years old → **₹ 87,37,458**
 >
-> checked with some real listings in similar areas. it's... not wrong. 
+> checked with some real listings in similar areas. it's... not wrong.
 
 <br>
 
@@ -144,12 +128,14 @@ two files to care about. `train_model.py` does the ML work. `app.py` is what you
 ## ⚡ getting this running (for real, step by step)
 
 **step 0 — clone it**
+
 ```bash
 git clone https://github.com/your-username/house-price-prediction.git
 cd house-price-prediction
 ```
 
 **step 1 — virtual environment (don't skip this, i'm serious)**
+
 ```bash
 python -m venv venv
 
@@ -161,6 +147,7 @@ source venv/bin/activate
 ```
 
 **step 2 — install the four libraries you need**
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -168,6 +155,7 @@ pip install -r requirements.txt
 that installs: `numpy`, `pandas`, `scikit-learn`, `matplotlib`, `seaborn`. tkinter comes with python already. you're done.
 
 **step 3 — train the model**
+
 ```bash
 python train_model.py
 ```
@@ -175,6 +163,7 @@ python train_model.py
 you'll see it print dataset stats, log the preprocessing steps, show the evaluation metrics, tell you where it saved the charts and the model. takes about 3 seconds.
 
 **step 4 — open the app**
+
 ```bash
 python app.py
 ```
@@ -186,6 +175,7 @@ window opens. fill in the fields. click predict. done.
 <br>
 
 > **linux users** — if tkinter throws an error:
+>
 > ```bash
 > sudo apt-get install python3-tk
 > ```
@@ -206,7 +196,7 @@ after training, four charts get saved to `charts/` automatically. here's what th
 
 **area vs price (scatter)** — coloured by location. the Urban/Suburban/Rural gap is visible immediately. this is the kind of chart you put in your slide deck.
 
-**actual vs predicted** — the one interviewers like. dots close to the diagonal line = good model. mine are close. 
+**actual vs predicted** — the one interviewers like. dots close to the diagonal line = good model. mine are close.
 
 <br>
 
@@ -216,17 +206,17 @@ after training, four charts get saved to `charts/` automatically. here's what th
 
 ## 🗃️ dataset columns (quick reference)
 
-| column | type | range / values |
-|---|---|---|
-| `Area` | int | sq ft, 700 – 3200 |
-| `Bedrooms` | int | 1 – 5 |
-| `Bathrooms` | int | 1 – 5 |
-| `Floors` | int | 1 – 3 |
-| `Parking` | int | 0 – 4 spaces |
-| `Location` | str | Urban / Suburban / Rural |
-| `Furnishing` | str | Furnished / Semi-Furnished / Unfurnished |
-| `HouseAge` | int | 1 – 25 years |
-| `Price` | int | ₹ target variable |
+| column       | type | range / values                           |
+| ------------ | ---- | ---------------------------------------- |
+| `Area`       | int  | sq ft, 700 – 3200                        |
+| `Bedrooms`   | int  | 1 – 5                                    |
+| `Bathrooms`  | int  | 1 – 5                                    |
+| `Floors`     | int  | 1 – 3                                    |
+| `Parking`    | int  | 0 – 4 spaces                             |
+| `Location`   | str  | Urban / Suburban / Rural                 |
+| `Furnishing` | str  | Furnished / Semi-Furnished / Unfurnished |
+| `HouseAge`   | int  | 1 – 25 years                             |
+| `Price`      | int  | ₹ target variable                        |
 
 100 rows. synthetic but realistic numbers. built to reflect actual Indian housing market patterns — Urban > Suburban > Rural, furnished adds ~30% premium, newer = pricier.
 
@@ -238,13 +228,13 @@ after training, four charts get saved to `charts/` automatically. here's what th
 
 ## 💬 things i'd do differently (or will add later)
 
-look, Linear Regression is a starting point. it's not the best algorithm for this. it's the most *explainable* algorithm for this, which matters more in college projects and interviews. you can literally say *"the coefficient on Area means each additional square foot adds X rupees to the predicted price"* and watch the interviewer nod.
+look, Linear Regression is a starting point. it's not the best algorithm for this. it's the most _explainable_ algorithm for this, which matters more in college projects and interviews. you can literally say _"the coefficient on Area means each additional square foot adds X rupees to the predicted price"_ and watch the interviewer nod.
 
 but if i keep building this:
 
 - [ ] **Random Forest / XGBoost** — compare with LR side by side. RF will win.
 - [ ] **K-Fold cross-validation** — stop relying on one random 80/20 split
-- [ ] **SHAP values** — show *why* the model predicted what it predicted, per house
+- [ ] **SHAP values** — show _why_ the model predicted what it predicted, per house
 - [ ] **Streamlit web app** — replace Tkinter so it runs in a browser and i can share a link
 - [ ] **real data scraping** — 99acres or MagicBricks with BeautifulSoup
 - [ ] **hyperparameter tuning** — GridSearchCV on the whole pipeline
@@ -272,7 +262,7 @@ if this helped you get an internship, that would genuinely make my day. let me k
 
 built with Python, scikit-learn, and mild sleep deprivation
 
-*if the model is wrong about your house price, please don't @ me*
+_if the model is wrong about your house price, please don't @ me_
 
 ---
 
