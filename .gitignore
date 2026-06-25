@@ -1,0 +1,20 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# Model artifacts and generated output
+models/
+charts/
+
+# IDE/editor files
+.vscode/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
