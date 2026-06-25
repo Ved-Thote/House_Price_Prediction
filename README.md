@@ -15,8 +15,6 @@ _because someone had to teach a computer what a house is worth_
 
 > _"My cousin paid ₹85 lakhs for a 2BHK. I made an ML model. We are not the same."_
 
-</div>
-
 ---
 
 <br>
